@@ -140,7 +140,7 @@ footer{
 }
 
 /* HEADING STYLES */
-/* TO DO: Part 1: Check heading contrast and adjust as necessary */
+/* Part 1: Check heading contrast and adjust as necessary */
 h1, h2, h3{
     font-family: var(--heading-fonts);
     font-weight: 800;
@@ -170,8 +170,16 @@ a{
     text-decoration-thickness: 4px;
 }
 
-/* TO DO: Part 4: Links are interactive elements, so they need focus and hover styles */
+/* Part 4: Links are interactive elements, so they need focus and hover styles */
 
+a:hover{
+    text-decoration-color: var(--orange);
+}
+
+a:focus{
+    outline: 4px solid var(--gold);
+    outline-offset: 2px;
+}
 
 /* NAVIGATION STYLES */
 nav{
@@ -192,7 +200,10 @@ nav a{
     transition: background-color 500ms;
 }
 
-/* TO DO: Part 4: We added hover styles above for all of the links on the page, but these are different */
+nav a:hover{
+    background-color: var(--wht);
+}
+/* Part 4: We added hover styles above for all of the links on the page, but these are different */
 
 
 /* CONTAINER STYLES */
@@ -201,10 +212,11 @@ main > section{
 }
 
 /* TEXT STYLES */
-/* TO DO: Part 2: Check text styles and adjust as necessary */
+/* Part 2: Check text styles and adjust as necessary */
 p{
     max-width: 65ch;
     margin: 0 auto;
+    padding: 8px 0;
 }
 
 strong{
@@ -217,8 +229,9 @@ summary{
     font-size: 1.3rem;
 }
 
-/* TO DO: Part 3: Check the styles below and adjust as necessary */
+/* Part 3: Check the styles below and adjust as necessary */
 details{
+    padding: 16px;
 	max-width: calc(65ch - 32px);
 	margin: 0.5rem auto;
 	border: 2px solid var(--olive);
@@ -234,8 +247,12 @@ summary::marker{
 	color: var(--orange);
 }
 
-/* TO DO: Part 4: The summary element opens and closes the details on the page. Review the styles of this interactive element and adjust as necessary */
-
+/* Part 4: The summary element opens and closes the details on the page. Review the styles of this interactive element and adjust as necessary */
+summary:focus{
+    outline: 4px solid var(--orange);
+    outline-offset: 2px;
+    background-color: var(--lt-gray);
+}
 
 /* SPACE SECTION STYLES */
 #space ul{
@@ -295,10 +312,12 @@ footer a{
     text-decoration: none;
 }
 
-/* TO DO: Part 3: Review the styles for the icons in the footer and adjust as necessary */
+/* Part 3: Review the styles for the icons in the footer and adjust as necessary */
 footer a svg{
     stroke: var(--dk-grn);
     margin-top: 8px;
+    width: 44px;
+    height: 44px;
 }
 
 footer a:hover svg{
